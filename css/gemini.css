@@ -1,0 +1,171 @@
+/* --- CONFIGURACIÓN GENERAL Y VARIABLES --- */
+:root {
+    --naranja-oscuro: #e65c00;
+    --naranja-brillante: #ff758c;
+    --rosa-pastel: #fff0f5;
+    --rosa-coral: #ff7e5f;
+    --texto-oscuro: #2d2d2d;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--rosa-pastel);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+/* --- HEADER (Heading con Logo a la izquierda) --- */
+.sitio-header {
+    background: linear-gradient(135deg, var(--naranja-oscuro), var(--rosa-coral));
+    color: var(--blanco);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--blanco);
+    object-fit: cover;
+}
+
+.nombre-sitio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Botones de navegación del Header */
+.navegacion {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: var(--blanco);
+    color: var(--naranja-oscuro);
+    transform: translateY(-2px);
+}
+
+/* --- CONTENEDOR Y TARJETAS DE RECETAS --- */
+.contenedor-recetas {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.tarjeta-receta {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 15px rgba(230, 92, 0, 0.08);
+    border-left: 5px solid var(--rosa-coral);
+    scroll-margin-top: 100px; /* Para que al apretar el botón no tape el título */
+}
+
+.tarjeta-receta h2 {
+    color: var(--naranja-oscuro);
+    margin-bottom: 15px;
+}
+
+.tarjeta-receta h3 {
+    color: var(--rosa-coral);
+    margin: 15px 0 5px 0;
+}
+
+.tarjeta-receta ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Imágenes */
+.imagen-destacada img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* --- MULTIMEDIA (Links y Videos) --- */
+.multimedia {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+
+/* El link de YouTube hecho con el comando <a> */
+.link-youtube {
+    color: var(--naranja-oscuro);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-youtube:hover {
+    color: var(--naranja-brillante);
+    text-decoration: underline;
+}
+
+/* Contenedor responsive para el video */
+.video-contenedor {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.video-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- FOOTER --- */
+.sitio-footer {
+    background-color: #2d2d2d;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--naranja-oscuro);
+}
